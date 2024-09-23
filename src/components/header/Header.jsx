@@ -32,17 +32,16 @@ export const Header = () => {
       <ul
         tabIndex={0}
         className="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow">
-        <li><a>Item 1</a></li>
+    
         <li>
           
           <ul className="p-2">
             {links}
           </ul>
         </li>
-        <li><a>Item 3</a></li>
       </ul>
     </div>
-    <a className="btn btn-ghost text-xl">Career Hub</a>
+    <a className="btn btn-ghost text-2xl font-bold">Career Hub</a>
   </div>
   <div className="navbar-center hidden lg:flex">
     <ul className="menu menu-horizontal px-1">
@@ -58,7 +57,7 @@ export const Header = () => {
     </ul>
   </div>
   <div className="navbar-end">
-    <a className="btn">Button</a>
+    <a className="btn">Star Applying</a>
   </div>
 </div>
     </div>
