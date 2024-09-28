@@ -1,9 +1,9 @@
 const Footer=()=>{
     return(
-        <div>
+        <div className="mt-10">
            <footer className="footer bg-neutral text-neutral-content p-10">
   <aside>
-    <p className="font-bold">Career Hub
+    <p className="font-bold text-2xl">Career Hub
 
     </p>
     <p>
