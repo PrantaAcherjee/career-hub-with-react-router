@@ -1,8 +1,9 @@
 import { CiLocationOn } from "react-icons/ci";
 import { AiOutlineDollar } from "react-icons/ai";
+import { Link } from "react-router-dom";
 
 function Jobs({job}) {
-    const{logo,job_title,company_name,salary,job_type,remote_or_onsite,location}=job;
+    const{id,logo,job_title,company_name,salary,job_type,remote_or_onsite,location}=job;
     return ( <div>
 
 <div className="card card-compact bg-base-100 w-96 shadow-xl mx-auto">
@@ -24,7 +25,9 @@ function Jobs({job}) {
     <p className="flex items-center"> <AiOutlineDollar className="mr-2"/> Salary: {salary}</p>
     </div>
     <div className="card-actions">
+      <Link to={`/job/${id}`}>
       <button className="btn bg-[#9873FF] font-bold">View Details</button>
+      </Link>    
     </div>
   </div>
 </div>
