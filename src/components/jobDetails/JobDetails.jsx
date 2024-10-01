@@ -1,4 +1,5 @@
 import { useLoaderData, useParams } from "react-router-dom";
+import { saveJobApplication } from "../../utility/localStorage";
  
  export const JobDetails = () => {
     const jobs=useLoaderData();
@@ -6,7 +7,10 @@ import { useLoaderData, useParams } from "react-router-dom";
     const idInt=parseInt(id);
     // console.log(id,jobs)
     const job=jobs.find(job=>job.id===idInt);
-    console.log(job,id)
+    
+    const handleAppliedJobs=()=>{
+     saveJobApplication(idInt)
+    }
     return ( <div>
         <h2>Job details of {id}</h2>
         <div className="grid md:grid-cols-4">
@@ -16,9 +20,11 @@ import { useLoaderData, useParams } from "react-router-dom";
                 <p>Educational Requirements: {job.educational_requirements}</p>
                 <p>Experiences: {job.experiences}</p>
             </div>
-            <div className="col-span-1">
+            <div className="col-span-1 m-5">
                 <p>Job Details</p>
-                <button className="btn">Apply Now</button>
+                <button
+                onClick={()=>handleAppliedJobs()}
+                className="btn">Apply Now</button>
             </div>
         </div>
 
